@@ -78,50 +78,6 @@ class FireTVCardServices extends LitElement {
                 : ""
             }
           </div>
-          <div class="row">
-            <paper-icon-button
-              .action="${"back"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:arrow-left"
-              title="Back"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"source"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:video-input-hdmi"
-              title="Source"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"home"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:home"
-              title="Home"
-            ></paper-icon-button>
-
-
-          </div>
-
-          <div class="row">
-            <paper-icon-button
-              .action="${"channelup"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:arrow-up"
-              title="Channelup"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"info"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:television-guide"
-              title="Guide"
-            ></paper-icon-button>
-            <paper-icon-button
-              .action="${"channeldown"}"
-              @click="${this.handleActionClick}"
-              icon="mdi:arrow-down"
-              title="Channeldown"
-            ></paper-icon-button>
-
-          </div>
 
           <div class="row">
             <paper-icon-button
@@ -162,6 +118,29 @@ class FireTVCardServices extends LitElement {
             ></paper-icon-button>
           </div>
 
+          </div>
+          <div class="row">
+            <paper-icon-button
+              .action="${"back"}"
+              @click="${this.handleActionClick}"
+              icon="mdi:arrow-left"
+              title="Back"
+            ></paper-icon-button>
+            <paper-icon-button
+              .action="${"home"}"
+              @click="${this.handleActionClick}"
+              icon="mdi:home"
+              title="Home"
+            ></paper-icon-button>
+            <paper-icon-button
+              .action="${"menu"}"
+              @click="${this.handleActionClick}"
+              icon="mdi:menu"
+              title="Menu"
+            ></paper-icon-button>
+
+          </div>
+
           <div class="row">
             <paper-icon-button
               .action="${"reverse"}"
@@ -170,7 +149,7 @@ class FireTVCardServices extends LitElement {
               title="Rewind"
             ></paper-icon-button>
             <paper-icon-button
-              .action="${"play"}"
+              .action="${"pauseplay"}"
               @click="${this.handleActionClick}"
               icon="mdi:play-pause"
               title="Play/Pause"
@@ -181,6 +160,7 @@ class FireTVCardServices extends LitElement {
               icon="mdi:fast-forward"
               title="Fast-Forward"
             ></paper-icon-button>
+
           </div>
 
           ${
@@ -262,22 +242,16 @@ class FireTVCardServices extends LitElement {
   handleActionClick(e) {
     const custom_services = [
       "power",
-      "volume_up",
-      "volume_down",
-      "volume_mute",
       "back",
-	  "source",
-      "info",
       "home",
-	  "channelup",
-	  "channeldown",
+	  "menu",
       "up",
       "left",
       "select",
       "right",
       "down",
       "reverse",
-      "play",
+      "pauseplay",
 	  "forward"
     ];
 
