@@ -3,7 +3,7 @@ const LitElement = Object.getPrototypeOf(
 );
 const html = LitElement.prototype.html;
 
-class TVCardServices extends LitElement {
+class FireTVCardServices extends LitElement {
   static get properties() {
     return {
       hass: {},
@@ -345,4 +345,4 @@ class TVCardServices extends LitElement {
   }
 }
 
-customElements.define("tv-card", TVCardServices);
+customElements.define("firetv-card", FireTVCardServices);
