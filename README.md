@@ -1,5 +1,5 @@
-# TV Remote Card
-📺 [Roku Lovelace Card](https://github.com/custom-cards/roku-card) editited by mar_robHD
+# FireTV Remote Card
+📺 [FireTV Lovelace Card](https://github.com/custom-cards/roku-card) editited by mar_robHD
 
 [![GitHub Release][releases-shield]][releases]
 [![License][license-shield]](LICENSE.md)
@@ -15,28 +15,25 @@
 
 ## Support
 
-This card is for [Lovelace](https://www.home-assistant.io/lovelace) on [Home Assistant](https://www.home-assistant.io/) that display a [TV]() remote.
+This card is for [Lovelace](https://www.home-assistant.io/lovelace) on [Home Assistant](https://www.home-assistant.io/) that display a [FireTV]() remote.
 
 # NOTE: Firefox releases before 67 are not supported
 https://twitter.com/_developit/status/1090364879377260544
 
-![ex](https://i.imgur.com/fUKI5Xm.png)
+![ex](https://i.imgur.com/CijSH49.png)
 
 ## Options
 
 | Name | Type | Requirement | Description
 | ---- | ---- | ------- | -----------
-| type | string | **Required** | `custom:roku-card`
+| type | string | **Required** | `custom:firetv-card`
 | entity | string | **Required** | `media_player` entity of Roku device
 | remote | string | **Optional** | `remote` entity of Roku device. Default assume named like `entity`
 | name | string | **Optional** | Card name
 | theme | string | **Optional** | Card theme
 | tv | boolean | **Optional** | If `true` shows volume and power buttons. Default `false`
 | power | `service` | **Optional**| service to call when power button pressed
-| volume_up | `service` | **Optional**| service to call when volume_up button pressed
-| volume_down | `service` | **Optional**| service to call when volume_down button pressed
 | back | `service` | **Optional**| service to call when back button pressed
-| info        | `service` | **Optional**| service to call when info button pressed
 | home | `service` | **Optional**| service to call when home button pressed
 | up | `service` | **Optional**| service to call when up button pressed
 | left | `service` | **Optional**| service to call when left button pressed
@@ -46,9 +43,6 @@ https://twitter.com/_developit/status/1090364879377260544
 | reverse | `service` | **Optional**| service to call when reverse button pressed
 | play | `service` | **Optional**| service to call when play button pressed
 | forward | `service` | **Optional**| service to call when forward button pressed
-| source | `service` | **Optional**| service to call when source button pressed
-| channelup | `service` | **Optional**| service to call when channelup button pressed
-| channeldown | `service` | **Optional**| service to call when channeldown button pressed
 
 ## `service` Options
 | Name | Type | Requirement | Description
@@ -61,24 +55,24 @@ https://twitter.com/_developit/status/1090364879377260544
 
 ### Step 1
 
-Install `tv-card` by copying `tv-card.js` and `tv-card-editor.js` from this repo to `<config directory>/www/tv-card.js` on your Home Assistant instance.
+Install `firetv-card` by copying `firetv-card.js` and `firetv-card-editor.js` from this repo to `<config directory>/www/firetv-card.js` on your Home Assistant instance.
 
 **Example:**
 
 ```bash
-wget https://raw.githubusercontent.com/marrobHD/tv-card/master/tv-card.js
-wget https://raw.githubusercontent.com/marrobHD/tv-card/master/tv-card-editor.js
-mv tv-card* /config/www/
+wget https://raw.githubusercontent.com/marrobHD/firetv-card/master/firetv-card.js
+wget https://raw.githubusercontent.com/marrobHD/firetv-card/master/firetv-card-editor.js
+mv firetv-card* /config/www/
 ```
 
 ### Step 2
 
-Link `tv-card` inside your `ui-lovelace.yaml`.
+Link `firetv-card` inside your `ui-lovelace.yaml`.
 
 ```yaml
 resources:
-  - url: /local/tv-card.js?v=0
-    type: module
+  - type: module
+    url: /local/tv-card.js?v=1
 ```
 
 ### Step 3
@@ -86,15 +80,61 @@ resources:
 Add a custom element in your `ui-lovelace.yaml`
 
 ```yaml
-      - type: custom:tv-card
-        entity: media_player.bedroom_tv
-        name: Bedroom TV
-        theme: darkpurple
-        tv: true
+      - theme: Backend-selected
+        tv: false
+        type: 'custom:firetv-card'
+        entity: media_player.spotify
+        name: TV
         power:
-          service: switch.turn_on
+          service: androidtv.adb_command
           service_data:
-            entity_id: switch.bedroom_tv_power
+            command: SLEEP
+            entity_id: media_player.firetv
+        back:
+          service: androidtv.adb_command
+          service_data:
+            command: BACK
+            entity_id: media_player.firetv
+        home:
+          service: androidtv.adb_command
+          service_data:
+            command: HOME
+            entity_id: media_player.firetv
+        up:
+          service: androidtv.adb_command
+          service_data:
+            command: UP
+            entity_id: media_player.firetv
+        left:
+          service: androidtv.adb_command
+          service_data:
+            command: LEFT
+            entity_id: media_player.firetv
+        select:
+          service: androidtv.adb_command
+          service_data:
+            command: ENTER
+            entity_id: media_player.firetv
+        right:
+          service: androidtv.adb_command
+          service_data:
+            command: RIGHT
+            entity_id: media_player.firetv
+        reverse:
+          service: androidtv.adb_command
+          service_data:
+            command: DOWN
+            entity_id: media_player.firetv
+        pauseplay:
+          service: androidtv.adb_command
+          service_data:
+            command: input keyevent 85
+            entity_id: media_player.firetv
+        forward:
+          service: androidtv.adb_command
+          service_data:
+            command: input keyevent 89
+            entity_id: media_player.firetv
 ```
 
 **Custom Updater:**
@@ -104,21 +144,21 @@ Add this to your `configuration.yaml`
 ```
 custom_updater:
   card_urls:
-    - https://raw.githubusercontent.com/marrobHD/tv-card/master/tracker.json
+    - https://raw.githubusercontent.com/marrobHD/firetv-card/master/tracker.json
 ```
 
 
 [Troubleshooting](https://github.com/thomasloven/hass-config/wiki/Lovelace-Plugins)
 
-[commits-shield]: https://img.shields.io/github/commit-activity/y/marrobHD/tv-card.svg?style=for-the-badge
-[commits]: https://github.com/marrobHD/tv-card/commits/master
+[commits-shield]: https://img.shields.io/github/commit-activity/y/marrobHD/firetv-card.svg?style=for-the-badge
+[commits]: https://github.com/marrobHD/firetv-card/commits/master
 [discord]: https://discord.gg/ND4emRS
 [discord-shield]: https://img.shields.io/discord/579704220970909717.svg?style=for-the-badge
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
 [forum]: https://community.home-assistant.io/t/lovelace-tv-remote-card/91476
-[license-shield]: https://img.shields.io/github/license/marrobHD/tv-card.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/marrobHD/firetv-card.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainer-marrobHD-blue.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/marrobHD/tv-card.svg?style=for-the-badge
-[releases]: https://github.com/marrobHD/tv-card/releases
+[releases-shield]: https://img.shields.io/github/release/marrobHD/firetv-card.svg?style=for-the-badge
+[releases]: https://github.com/marrobHD/firetv-card/releases
 [twitter]: https://img.shields.io/twitter/follow/mar_robHD.svg?style=social
 [github]: https://img.shields.io/github/followers/marrobHD.svg?style=social
