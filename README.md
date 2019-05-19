@@ -100,6 +100,11 @@ Add a custom element in your `ui-lovelace.yaml`
           service_data:
             command: HOME
             entity_id: media_player.firetv
+        down:
+          service: androidtv.adb_command
+          service_data:
+            command: DOWN
+            entity_id: media_player.firetv
         up:
           service: androidtv.adb_command
           service_data:
@@ -123,7 +128,7 @@ Add a custom element in your `ui-lovelace.yaml`
         reverse:
           service: androidtv.adb_command
           service_data:
-            command: DOWN
+            command: input keyevent 89
             entity_id: media_player.firetv
         pauseplay:
           service: androidtv.adb_command
@@ -133,7 +138,12 @@ Add a custom element in your `ui-lovelace.yaml`
         forward:
           service: androidtv.adb_command
           service_data:
-            command: input keyevent 89
+            command: input keyevent 90
+            entity_id: media_player.firetv
+        menu:
+          service: androidtv.adb_command
+          service_data:
+            command: MENU
             entity_id: media_player.firetv
 ```
 
