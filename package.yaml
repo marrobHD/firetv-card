@@ -1,14 +1,15 @@
-name: TV Card
-description: 📺 TV Remote Card
+name: FireTV Card
+description: 📺 FireTV Remote Card
 type: lovelace
 keywords:
-  - tvcard
+  - firetvcard
   - remote
-  - tv
+  - firetv
+  - amazon
   - television
 author:
   name: mar_robHD
 license: Apache License, Version 2.0
 files:
-  - tv-card.js
-  - tv-card-editor.js
+  - firetv-card.js
+  - firetv-card-editor.js
