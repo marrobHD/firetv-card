@@ -88,7 +88,7 @@ Add a custom element in your `ui-lovelace.yaml`
         power:
           service: androidtv.adb_command
           service_data:
-            command: SLEEP
+            command: "input keyevent 26"
             entity_id: media_player.firetv
         back:
           service: androidtv.adb_command
