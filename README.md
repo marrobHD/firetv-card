@@ -118,7 +118,7 @@ Add a custom element in your `ui-lovelace.yaml`
         select:
           service: androidtv.adb_command
           service_data:
-            command: ENTER
+            command: "input keyevent 23"
             entity_id: media_player.firetv
         right:
           service: androidtv.adb_command
