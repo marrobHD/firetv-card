@@ -20,7 +20,7 @@ This card is for [Lovelace](https://www.home-assistant.io/lovelace) on [Home Ass
 # NOTE: Firefox releases before 67 are not supported
 https://twitter.com/_developit/status/1090364879377260544
 
-![ex](https://i.imgur.com/CijSH49.png)
+![ex](chrome_aXZu43Ricr.png)
 
 ## Options
 
@@ -100,7 +100,7 @@ Add a custom element in your `ui-lovelace.yaml`
         theme: Backend-selected
         tv: false
         entity: media_player.spotify
-        name: TV
+        name: FireTV
         power:
           service: androidtv.adb_command
           service_data:
@@ -162,6 +162,91 @@ Add a custom element in your `ui-lovelace.yaml`
             command: MENU
             entity_id: media_player.firetv
 ```
+
+### Example 1:
+
+You can use the card in combination with the [browser mod integration](https://github.com/thomasloven/hass-browser_mod).
+That means that you can create a ex. input_boolean which opens when you click on its icon:
+
+```yaml
+type: entities
+entities:
+  - entity: input_boolean.firetv
+    name: FireTV
+    tap_action:
+      action: call-service
+      service: browser_mod.popup
+      service_data:
+        style:
+          border-radius: 20px
+          '--ha-card-border-radius': 0px
+        title: FireTV Fernbedienung
+        card:
+          type: 'custom:firetv-card'
+          back:
+            service: androidtv.adb_command
+            service_data:
+              command: BACK
+              entity_id: media_player.firetv
+          down:
+            service: androidtv.adb_command
+            service_data:
+              command: DOWN
+              entity_id: media_player.firetv
+          entity: media_player.spotify
+          forward:
+            service: androidtv.adb_command
+            service_data:
+              command: input keyevent 90
+              entity_id: media_player.firetv
+          home:
+            service: androidtv.adb_command
+            service_data:
+              command: HOME
+              entity_id: media_player.firetv
+          left:
+            service: androidtv.adb_command
+            service_data:
+              command: LEFT
+              entity_id: media_player.firetv
+          menu:
+            service: androidtv.adb_command
+            service_data:
+              command: MENU
+              entity_id: media_player.firetv
+          pauseplay:
+            service: androidtv.adb_command
+            service_data:
+              command: input keyevent 85
+              entity_id: media_player.firetv
+          power:
+            service: androidtv.adb_command
+            service_data:
+              command: input keyevent 26
+              entity_id: media_player.firetv
+          reverse:
+            service: androidtv.adb_command
+            service_data:
+              command: input keyevent 89
+              entity_id: media_player.firetv
+          right:
+            service: androidtv.adb_command
+            service_data:
+              command: RIGHT
+              entity_id: media_player.firetv
+          select:
+            service: androidtv.adb_command
+            service_data:
+              command: input keyevent 23
+              entity_id: media_player.firetv
+          tv: false
+          up:
+            service: androidtv.adb_command
+            service_data:
+              command: UP
+              entity_id: media_player.firetv
+```
+
 
 **suspended:Custom Updater:**
 
