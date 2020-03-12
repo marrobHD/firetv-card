@@ -8,7 +8,7 @@ Add this to your lovelace configuration:
 type: 'custom:firetv-card'
 theme: Backend-selected
 tv: false
-entity: media_player.spotify
+entity: sun.sun
 name: FireTV
 power:
   service: androidtv.adb_command
