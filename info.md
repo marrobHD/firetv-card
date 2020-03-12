@@ -1,6 +1,6 @@
 **Sample overview:**
 
-![Sample overview](https://github.com/marrobHD/tv-card/blob/master/8Gq031OUIo.png)
+![Sample overview](https://github.com/marrobHD/firetv-card/blob/master/8Gq031OUIo.png)
 
 Add this to your lovelace configuration:
 
