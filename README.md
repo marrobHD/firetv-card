@@ -96,9 +96,9 @@ resources:
 Add a custom element in your `ui-lovelace.yaml`
 
 ```yaml
-      - theme: Backend-selected
-        tv: false
         type: 'custom:firetv-card'
+        theme: Backend-selected
+        tv: false
         entity: media_player.spotify
         name: TV
         power:
