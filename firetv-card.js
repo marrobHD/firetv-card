@@ -13,8 +13,8 @@ class FireTVCardServices extends LitElement {
   }
 
   static async getConfigElement() {
-    await import("./tv-card-editor.js");
-    return document.createElement("tv-card-editor");
+    await import("./firetv-card-editor.js");
+    return document.createElement("firetv-card-editor");
   }
 
   static getStubConfig() {
