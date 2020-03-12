@@ -183,6 +183,7 @@ entities:
         title: FireTV Fernbedienung
         card:
           type: 'custom:firetv-card'
+          entity: sun.sun
           back:
             service: androidtv.adb_command
             service_data:
@@ -193,7 +194,6 @@ entities:
             service_data:
               command: DOWN
               entity_id: media_player.firetv
-          entity: sun.sun
           forward:
             service: androidtv.adb_command
             service_data:
