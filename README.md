@@ -27,7 +27,7 @@ https://twitter.com/_developit/status/1090364879377260544
 | Name | Type | Requirement | Description
 | ---- | ---- | ------- | -----------
 | type | string | **Required** | `custom:firetv-card`
-| entity | string | **Required** | `media_player` entity of Roku device
+| entity | string | **Required** | `random` entity
 | remote | string | **Optional** | `remote` entity of Roku device. Default assume named like `entity`
 | name | string | **Optional** | Card name
 | theme | string | **Optional** | Card theme
@@ -99,7 +99,7 @@ Add a custom element in your `ui-lovelace.yaml`
         type: 'custom:firetv-card'
         theme: Backend-selected
         tv: false
-        entity: media_player.spotify
+        entity: sun.sun
         name: FireTV
         power:
           service: androidtv.adb_command
@@ -193,7 +193,7 @@ entities:
             service_data:
               command: DOWN
               entity_id: media_player.firetv
-          entity: media_player.spotify
+          entity: sun.sun
           forward:
             service: androidtv.adb_command
             service_data:
