@@ -43,9 +43,6 @@ https://twitter.com/_developit/status/1090364879377260544
 | reverse | `service` | **Optional**| service to call when reverse button pressed
 | play | `service` | **Optional**| service to call when play button pressed
 | forward | `service` | **Optional**| service to call when forward button pressed
-| volume_up | `service` | **Optional**| service to call when volume up button pressed
-| volume_down | `service` | **Optional**| service to call when volume down button pressed
-| volume_mute | `service` | **Optional**| service to call when volume mute button pressed
 
 ## `service` Options
 | Name | Type | Requirement | Description
