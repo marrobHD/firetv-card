@@ -318,4 +318,5 @@ class FireTVCardServices extends LitElement {
   }
 }
 
+
 customElements.define("firetv-card", FireTVCardServices);
