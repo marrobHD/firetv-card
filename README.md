@@ -46,6 +46,7 @@ https://twitter.com/_developit/status/1090364879377260544
 | volume_up | `service` | **Optional**| service to call when volume up button pressed
 | volume_down | `service` | **Optional**| service to call when volume down button pressed
 | volume_mute | `service` | **Optional**| service to call when volume mute button pressed
+| invisible | `service` | **Optional**| service to call when invisible button between the power buttons is pressed
 
 ## `service` Options
 | Name | Type | Requirement | Description
