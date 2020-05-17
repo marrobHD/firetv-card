@@ -60,7 +60,7 @@ class FireTVCardServices extends LitElement {
                       .action="${"invisible"}"
                       @click="${this.handleActionClick}"
                       icon=""
-                      title="sd"
+                      title=""
                     ></paper-icon-button>
                     <paper-icon-button
                       .action="${"power"}"
