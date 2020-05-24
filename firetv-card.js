@@ -50,24 +50,24 @@ class FireTVCardServices extends LitElement {
             this._config.power
               ? html`
                   <div class="row">
-                    <paper-icon-button
+                    <ha-icon-button
                       .action="${"power"}"
                       @click="${this.handleActionClick}"
                       icon="mdi:power"
                       title="Power"
-                    ></paper-icon-button>
-                    <paper-icon-button
+                    ></ha-icon-button>
+                    <ha-icon-button
                       .action="${"invisible"}"
                       @click="${this.handleActionClick}"
                       icon=""
                       title=""
-                    ></paper-icon-button>
-                    <paper-icon-button
+                    ></ha-icon-button>
+                    <ha-icon-button
                       .action="${"power"}"
                       @click="${this.handleActionClick}"
                       icon="mdi:power"
                       title="Power"
-                    ></paper-icon-button>
+                    ></ha-icon-button>
                   </div>
                 `
               : ""
@@ -77,86 +77,86 @@ class FireTVCardServices extends LitElement {
           </div>
 
           <div class="row">
-            <paper-icon-button
+            <ha-icon-button
               .action="${"up"}"
               @click="${this.handleActionClick}"
               icon="mdi:chevron-up"
               title="Up"
-            ></paper-icon-button>
+            ></ha-icon-button>
           </div>
 
           <div class="row">
-            <paper-icon-button
+            <ha-icon-button
               .action="${"left"}"
               @click="${this.handleActionClick}"
               icon="mdi:chevron-left"
               title="Left"
-            ></paper-icon-button>
-            <paper-icon-button
+            ></ha-icon-button>
+            <ha-icon-button
               .action="${"select"}"
               @click="${this.handleActionClick}"
               icon="mdi:checkbox-blank-circle"
               title="Select"
-            ></paper-icon-button>
-            <paper-icon-button
+            ></ha-icon-button>
+            <ha-icon-button
               .action="${"right"}"
               @click="${this.handleActionClick}"
               icon="mdi:chevron-right"
               title="Right"
-            ></paper-icon-button>
+            ></ha-icon-button>
           </div>
 
           <div class="row">
-            <paper-icon-button
+            <ha-icon-button
               .action="${"down"}"
               @click="${this.handleActionClick}"
               icon="mdi:chevron-down"
               title="Down"
-            ></paper-icon-button>
+            ></ha-icon-button>
           </div>
 
           </div>
           <div class="row">
-            <paper-icon-button
+            <ha-icon-button
               .action="${"back"}"
               @click="${this.handleActionClick}"
               icon="mdi:arrow-left"
               title="Back"
-            ></paper-icon-button>
-            <paper-icon-button
+            ></ha-icon-button>
+            <ha-icon-button
               .action="${"home"}"
               @click="${this.handleActionClick}"
               icon="mdi:home"
               title="Home"
-            ></paper-icon-button>
-            <paper-icon-button
+            ></ha-icon-button>
+            <ha-icon-button
               .action="${"menu"}"
               @click="${this.handleActionClick}"
               icon="mdi:menu"
               title="Menu"
-            ></paper-icon-button>
+            ></ha-icon-button>
 
           </div>
 
           <div class="row">
-            <paper-icon-button
+            <ha-icon-button
               .action="${"reverse"}"
               @click="${this.handleActionClick}"
               icon="mdi:rewind"
               title="Rewind"
-            ></paper-icon-button>
-            <paper-icon-button
+            ></ha-icon-button>
+            <ha-icon-button
               .action="${"pauseplay"}"
               @click="${this.handleActionClick}"
               icon="mdi:play-pause"
               title="Play/Pause"
-            ></paper-icon-button>
-            <paper-icon-button
+            ></ha-icon-button>
+            <ha-icon-button
               .action="${"forward"}"
               @click="${this.handleActionClick}"
               icon="mdi:fast-forward"
               title="Fast-Forward"
-            ></paper-icon-button>
+            ></ha-icon-button>
 
           </div>
 
@@ -167,24 +167,24 @@ class FireTVCardServices extends LitElement {
             this._config.volume_mute
               ? html`
                   <div class="row">
-                    <paper-icon-button
+                    <ha-icon-button
                       .action="${"volume_mute"}"
                       @click="${this.handleActionClick}"
                       icon="mdi:volume-mute"
                       title="Volume Mute"
-                    ></paper-icon-button>
-                    <paper-icon-button
+                    ></ha-icon-button>
+                    <ha-icon-button
                       .action="${"volume_down"}"
                       @click="${this.handleActionClick}"
                       icon="mdi:volume-minus"
                       title="Volume Down"
-                    ></paper-icon-button>
-                    <paper-icon-button
+                    ></ha-icon-button>
+                    <ha-icon-button
                       .action="${"volume_up"}"
                       @click="${this.handleActionClick}"
                       icon="mdi:volume-plus"
                       title="Volume Up"
-                    ></paper-icon-button>
+                    ></ha-icon-button>
                   </div>
                 `
               : ""
@@ -212,10 +212,11 @@ class FireTVCardServices extends LitElement {
           padding: 16px 0px 16px 0px;
         }
         img,
-        paper-icon-button {
+        ha-icon-button {
           width: 64px;
           height: 64px;
           cursor: pointer;
+          --mdc-icon-size: 100%;
         }
         .row {
           display: flex;
