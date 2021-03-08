@@ -161,10 +161,10 @@ class FireTVCardServices extends LitElement {
           </div>
 
           ${
-            this._config.tv ||
+            this._config.tv && (
             this._config.volume_up ||
             this._config.volume_down ||
-            this._config.volume_mute
+            this._config.volume_mute )
               ? html`
                   <div class="row">
                     <ha-icon-button
