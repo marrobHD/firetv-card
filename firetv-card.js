@@ -54,15 +54,18 @@ class FireTVCardServices extends LitElement {
                       .action="${"power"}"
                       @click="${this.handleActionClick}"
                       title="Power"
-                    ><ha-icon icon="mdi:power"></ha-icon></ha-icon-button>                    <ha-icon-button
+                    ><ha-icon icon="mdi:power"></ha-icon></ha-icon-button>
+                    <ha-icon-button
                       .action="${"invisible"}"
                       @click="${this.handleActionClick}"
                       title=""
-                    ><ha-icon icon="mdi:none"></ha-icon></ha-icon-button>                    <ha-icon-button
+                    ><ha-icon icon="mdi:none"></ha-icon></ha-icon-button>
+                    <ha-icon-button
                       .action="${"power"}"
                       @click="${this.handleActionClick}"
                       title="Power"
-                    ><ha-icon icon="mdi:power"></ha-icon></ha-icon-button>                  </div>
+                    ><ha-icon icon="mdi:power"></ha-icon></ha-icon-button>
+                    </div>
                 `
               : ""
           }
@@ -75,29 +78,34 @@ class FireTVCardServices extends LitElement {
               .action="${"up"}"
               @click="${this.handleActionClick}"
               title="Up"
-            ><ha-icon icon="mdi:chevron-up"></ha-icon></ha-icon-button>          </div>
+            ><ha-icon icon="mdi:chevron-up"></ha-icon></ha-icon-button>
+            </div>
 
           <div class="row">
             <ha-icon-button
               .action="${"left"}"
               @click="${this.handleActionClick}"
               title="Left"
-            ><ha-icon icon="mdi:chevron-left"></ha-icon></ha-icon-button>            <ha-icon-button
+            ><ha-icon icon="mdi:chevron-left"></ha-icon></ha-icon-button>
+            <ha-icon-button
               .action="${"select"}"
               @click="${this.handleActionClick}"
               title="Select"
-            ><ha-icon icon="mdi:checkbox-blank-circle"></ha-icon></ha-icon-button>            <ha-icon-button
+            ><ha-icon icon="mdi:checkbox-blank-circle"></ha-icon></ha-icon-button>
+            <ha-icon-button
               .action="${"right"}"
               @click="${this.handleActionClick}"
               title="Right"
-            ><ha-icon icon="mdi:chevron-right"></ha-icon></ha-icon-button>          </div>
+            ><ha-icon icon="mdi:chevron-right"></ha-icon></ha-icon-button>
+            </div>
 
           <div class="row">
             <ha-icon-button
               .action="${"down"}"
               @click="${this.handleActionClick}"
               title="Down"
-            ><ha-icon icon="mdi:chevron-down"></ha-icon></ha-icon-button>          </div>
+            ><ha-icon icon="mdi:chevron-down"></ha-icon></ha-icon-button>
+            </div>
 
           </div>
           <div class="row">
@@ -105,11 +113,13 @@ class FireTVCardServices extends LitElement {
               .action="${"back"}"
               @click="${this.handleActionClick}"
               title="Back"
-            ><ha-icon icon="mdi:arrow-left"></ha-icon></ha-icon-button>            <ha-icon-button
+            ><ha-icon icon="mdi:arrow-left"></ha-icon></ha-icon-button>
+            <ha-icon-button
               .action="${"home"}"
               @click="${this.handleActionClick}"
               title="Home"
-            ><ha-icon icon="mdi:home"></ha-icon></ha-icon-button>            <ha-icon-button
+            ><ha-icon icon="mdi:home"></ha-icon></ha-icon-button>
+            <ha-icon-button
               .action="${"menu"}"
               @click="${this.handleActionClick}"
               title="Menu"
@@ -121,11 +131,13 @@ class FireTVCardServices extends LitElement {
               .action="${"reverse"}"
               @click="${this.handleActionClick}"
               title="Rewind"
-            ><ha-icon icon="mdi:rewind"></ha-icon></ha-icon-button>            <ha-icon-button
+            ><ha-icon icon="mdi:rewind"></ha-icon></ha-icon-button>
+            <ha-icon-button
               .action="${"pauseplay"}"
               @click="${this.handleActionClick}"
               title="Play/Pause"
-            ><ha-icon icon="mdi:play-pause"></ha-icon></ha-icon-button>            <ha-icon-button
+            ><ha-icon icon="mdi:play-pause"></ha-icon></ha-icon-button>
+            <ha-icon-button
               .action="${"forward"}"
               @click="${this.handleActionClick}"
               title="Fast-Forward"
@@ -144,16 +156,19 @@ class FireTVCardServices extends LitElement {
                       @click="${this.handleActionClick}"
                       icon="mdi:volume-mute"
                       title="Volume Mute"
-                    ><ha-icon icon="${icon}"></ha-icon></ha-icon-button>                    <ha-icon-button
+                    ><ha-icon icon="${icon}"></ha-icon></ha-icon-button>
+                    <ha-icon-button
                       .action="${"volume_down"}"
                       @click="${this.handleActionClick}"
                       icon="mdi:volume-minus"
                       title="Volume Down"
-                    ><ha-icon icon="${icon}"></ha-icon></ha-icon-button>                    <ha-icon-button
+                    ><ha-icon icon="${icon}"></ha-icon></ha-icon-button>
+                    <ha-icon-button
                       .action="${"volume_up"}"
                       @click="${this.handleActionClick}"
                       title="Volume Up"
-                    ><ha-icon icon="mdi:volume-plus"></ha-icon></ha-icon-button>                  </div>
+                    ><ha-icon icon="mdi:volume-plus"></ha-icon></ha-icon-button>
+                    </div>
                 `
               : ""
           }
