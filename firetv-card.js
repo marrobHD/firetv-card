@@ -53,22 +53,16 @@ class FireTVCardServices extends LitElement {
                     <ha-icon-button
                       .action="${"power"}"
                       @click="${this.handleActionClick}"
-                      icon="mdi:power"
                       title="Power"
-                    ></ha-icon-button>
-                    <ha-icon-button
+                    ><ha-icon icon="mdi:power"></ha-icon></ha-icon-button>                    <ha-icon-button
                       .action="${"invisible"}"
                       @click="${this.handleActionClick}"
-                      icon=""
                       title=""
-                    ></ha-icon-button>
-                    <ha-icon-button
+                    ><ha-icon icon="mdi:none"></ha-icon></ha-icon-button>                    <ha-icon-button
                       .action="${"power"}"
                       @click="${this.handleActionClick}"
-                      icon="mdi:power"
                       title="Power"
-                    ></ha-icon-button>
-                  </div>
+                    ><ha-icon icon="mdi:power"></ha-icon></ha-icon-button>                  </div>
                 `
               : ""
           }
@@ -80,91 +74,69 @@ class FireTVCardServices extends LitElement {
             <ha-icon-button
               .action="${"up"}"
               @click="${this.handleActionClick}"
-              icon="mdi:chevron-up"
               title="Up"
-            ></ha-icon-button>
-          </div>
+            ><ha-icon icon="mdi:chevron-up"></ha-icon></ha-icon-button>          </div>
 
           <div class="row">
             <ha-icon-button
               .action="${"left"}"
               @click="${this.handleActionClick}"
-              icon="mdi:chevron-left"
               title="Left"
-            ></ha-icon-button>
-            <ha-icon-button
+            ><ha-icon icon="mdi:chevron-left"></ha-icon></ha-icon-button>            <ha-icon-button
               .action="${"select"}"
               @click="${this.handleActionClick}"
-              icon="mdi:checkbox-blank-circle"
               title="Select"
-            ></ha-icon-button>
-            <ha-icon-button
+            ><ha-icon icon="mdi:checkbox-blank-circle"></ha-icon></ha-icon-button>            <ha-icon-button
               .action="${"right"}"
               @click="${this.handleActionClick}"
-              icon="mdi:chevron-right"
               title="Right"
-            ></ha-icon-button>
-          </div>
+            ><ha-icon icon="mdi:chevron-right"></ha-icon></ha-icon-button>          </div>
 
           <div class="row">
             <ha-icon-button
               .action="${"down"}"
               @click="${this.handleActionClick}"
-              icon="mdi:chevron-down"
               title="Down"
-            ></ha-icon-button>
-          </div>
+            ><ha-icon icon="mdi:chevron-down"></ha-icon></ha-icon-button>          </div>
 
           </div>
           <div class="row">
             <ha-icon-button
               .action="${"back"}"
               @click="${this.handleActionClick}"
-              icon="mdi:arrow-left"
               title="Back"
-            ></ha-icon-button>
-            <ha-icon-button
+            ><ha-icon icon="mdi:arrow-left"></ha-icon></ha-icon-button>            <ha-icon-button
               .action="${"home"}"
               @click="${this.handleActionClick}"
-              icon="mdi:home"
               title="Home"
-            ></ha-icon-button>
-            <ha-icon-button
+            ><ha-icon icon="mdi:home"></ha-icon></ha-icon-button>            <ha-icon-button
               .action="${"menu"}"
               @click="${this.handleActionClick}"
-              icon="mdi:menu"
               title="Menu"
-            ></ha-icon-button>
-
+            ><ha-icon icon="mdi:menu"></ha-icon></ha-icon-button>
           </div>
 
           <div class="row">
             <ha-icon-button
               .action="${"reverse"}"
               @click="${this.handleActionClick}"
-              icon="mdi:rewind"
               title="Rewind"
-            ></ha-icon-button>
-            <ha-icon-button
+            ><ha-icon icon="mdi:rewind"></ha-icon></ha-icon-button>            <ha-icon-button
               .action="${"pauseplay"}"
               @click="${this.handleActionClick}"
-              icon="mdi:play-pause"
               title="Play/Pause"
-            ></ha-icon-button>
-            <ha-icon-button
+            ><ha-icon icon="mdi:play-pause"></ha-icon></ha-icon-button>            <ha-icon-button
               .action="${"forward"}"
               @click="${this.handleActionClick}"
-              icon="mdi:fast-forward"
               title="Fast-Forward"
-            ></ha-icon-button>
-
+            ><ha-icon icon="mdi:fast-forward"></ha-icon></ha-icon-button>
           </div>
 
           ${
-            this._config.tv && (
+            this._config.tv ||
             this._config.volume_up ||
             this._config.volume_down ||
-            this._config.volume_mute )
+            this._config.volume_mute
               ? html`
                   <div class="row">
                     <ha-icon-button
@@ -172,20 +144,16 @@ class FireTVCardServices extends LitElement {
                       @click="${this.handleActionClick}"
                       icon="mdi:volume-mute"
                       title="Volume Mute"
-                    ></ha-icon-button>
-                    <ha-icon-button
+                    ><ha-icon icon="${icon}"></ha-icon></ha-icon-button>                    <ha-icon-button
                       .action="${"volume_down"}"
                       @click="${this.handleActionClick}"
                       icon="mdi:volume-minus"
                       title="Volume Down"
-                    ></ha-icon-button>
-                    <ha-icon-button
+                    ><ha-icon icon="${icon}"></ha-icon></ha-icon-button>                    <ha-icon-button
                       .action="${"volume_up"}"
                       @click="${this.handleActionClick}"
-                      icon="mdi:volume-plus"
                       title="Volume Up"
-                    ></ha-icon-button>
-                  </div>
+                    ><ha-icon icon="mdi:volume-plus"></ha-icon></ha-icon-button>                  </div>
                 `
               : ""
           }
