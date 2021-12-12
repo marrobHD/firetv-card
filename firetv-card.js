@@ -154,15 +154,13 @@ class FireTVCardServices extends LitElement {
                     <ha-icon-button
                       .action="${"volume_mute"}"
                       @click="${this.handleActionClick}"
-                      icon="mdi:volume-mute"
                       title="Volume Mute"
-                    ><ha-icon icon="${icon}"></ha-icon></ha-icon-button>
+                    ><ha-icon icon="mdi:volume-mute"></ha-icon></ha-icon-button>
                     <ha-icon-button
                       .action="${"volume_down"}"
                       @click="${this.handleActionClick}"
-                      icon="mdi:volume-minus"
                       title="Volume Down"
-                    ><ha-icon icon="${icon}"></ha-icon></ha-icon-button>
+                    ><ha-icon icon="mdi:volume-minus"></ha-icon></ha-icon-button>
                     <ha-icon-button
                       .action="${"volume_up"}"
                       @click="${this.handleActionClick}"
