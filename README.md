@@ -1,3 +1,6 @@
+# :warning: Archived: Please move to https://github.com/marrobHD/tv-card 
+
+
 # FireTV Remote Card
 📺 [FireTV Lovelace Card](https://github.com/custom-cards/roku-card) editited by mar_robHD
 
